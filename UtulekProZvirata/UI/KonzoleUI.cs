@@ -14,7 +14,11 @@ namespace UtulekProZvirata.UI
 
         static string UI()
         {
-            string uvodmsg = "=-=-= Útulek pro zvířata =-=-=";
+            string uvodmsg = @"=-=-= Útulek pro zvířata =-=-= 
+1) Přidat zvíře 
+2) Vypsat všechna zvířata
+3) Vyhledat/filtrovat
+"; 
             return uvodmsg;
         }
     }
