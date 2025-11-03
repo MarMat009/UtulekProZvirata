@@ -24,9 +24,7 @@ namespace UtulekProZvirata
             //volani KonzoleUI.cs
             while (Bezi)
             {
-                //nahradit docasnou hodnotu funkcí z KonzoleUI.cs
-                int docasnahodnota = int.Parse(Console.ReadLine());
-               switch(docasnahodnota)
+               switch(int.Parse(KonzoleUI.UI()))
                 {
                     case 1:
                         //pridat zviře pomoci Zvire.cs
