@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtulekProZvirata.Model;
 using UtulekProZvirata.UI;
 
 namespace UtulekProZvirata
@@ -13,7 +14,11 @@ namespace UtulekProZvirata
         {
             //start up
             //import dat z excelu do listu
-            //
+            List<Zvire> ListZvirat =  new List<Zvire>();
+            //ListZvirat.Add(new Zvire());
+            //ListZvirat.Add(new Zvire());
+            //ListZvirat.Add(new Zvire());
+
             bool Bezi = true;
             //spustit while loop
             //volani KonzoleUI.cs
