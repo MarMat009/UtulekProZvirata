@@ -20,8 +20,8 @@ namespace UtulekProZvirata.Model
 
         public Zvire(string Jmeno, string Druh, int Vek, string Pohlavi, bool Kastrovanost, string DatumPrijmu, string ZdravotniStav, string Poznamka)
         {
-            int i = Program.ListZvirat.Count;
-            Id = Program.ListZvirat[i]+1;
+            int i = //podle listu z Program.cs
+            Id =  + 1;
             this.Jmeno = Jmeno;
             this.Druh = Druh;
             this.Vek = Vek;
@@ -33,8 +33,8 @@ namespace UtulekProZvirata.Model
         }
         public Zvire(string Jmeno, string Druh, int Vek, string Pohlavi, bool Kastrovanost, string ZdravotniStav, string Poznamka)
         {
-            int i = Program.ListZvirat.Count;
-            Id = Program.ListZvirat[i] + 1;
+            int i = ;
+            Id =  + 1;
             this.Jmeno = Jmeno;
             this.Druh = Druh;
             this.Vek = Vek;
@@ -43,6 +43,11 @@ namespace UtulekProZvirata.Model
             DatumPrijmu = DateTime.Now.ToString("dd.MM.yyyy");
             this.ZdravotniStav = ZdravotniStav;
             this.Poznamka = Poznamka;
+        }
+
+        public override string ToString()
+        {
+            return; //vratit vsechny atributy jako jeden string pro vypis
         }
     }
 }
