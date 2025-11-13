@@ -19,6 +19,7 @@ namespace UtulekProZvirata.Model
         private string Poznamka;
         private bool Adoptovan;
         private string DatumAdopce;
+        private bool Skryt;
 
         public Zvire(int Id, string Jmeno, string Druh, int Vek, string Pohlavi, bool Kastrovanost, string DatumPrijmu, string ZdravotniStav, string Poznamka)
         {
@@ -32,6 +33,7 @@ namespace UtulekProZvirata.Model
             this.ZdravotniStav = ZdravotniStav;
             this.Poznamka = Poznamka;
             Adoptovan = false;
+            Skryt = false;
         }
         public Zvire(int Id, string Jmeno, string Druh, int Vek, string Pohlavi, bool Kastrovanost, string ZdravotniStav, string Poznamka)
         {
@@ -45,6 +47,7 @@ namespace UtulekProZvirata.Model
             this.ZdravotniStav = ZdravotniStav;
             this.Poznamka = Poznamka;
             Adoptovan = false;
+            Skryt = false;
         }
 
 
@@ -53,7 +56,7 @@ namespace UtulekProZvirata.Model
 
         public override string ToString()
         {
-            return "{Id}§{Jmeno}§{Druh}§{Vek}§{Pohlavi}§{Kastrovanost}§{DatumPrijmu}§{ZdravotniStav}§{Poznamka}§{Adoptovan}§{DatumAdopce}";
+            return "{Id}§{Jmeno}§{Druh}§{Vek}§{Pohlavi}§{Kastrovanost}§{DatumPrijmu}§{ZdravotniStav}§{Poznamka}§{Adoptovan}§{DatumAdopce}§{Skryt}";
         }
         public int ReturnId()
         {
@@ -99,6 +102,10 @@ namespace UtulekProZvirata.Model
         {
             return DatumAdopce;
         }
+        public bool ReturnSkryt()
+        {
+            return Skryt;
+        }
 
 
 
@@ -128,6 +135,10 @@ namespace UtulekProZvirata.Model
         {
             Adoptovan = true;
             DatumAdopce = DateTime.Now.ToString("dd.MM.yyyy");
+        }
+        public void ZmenaSkryti()
+        {
+            Skryt = !Skryt;
         }
     }
 }
