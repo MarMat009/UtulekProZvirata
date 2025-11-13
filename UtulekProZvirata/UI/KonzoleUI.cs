@@ -12,7 +12,7 @@ namespace UtulekProZvirata.UI
 
         
 
-        static string uvodmsg()
+         string UI()
         {
             //toto vypiš s console.write ne s console.writeline
             string uvodmsg_odpověď = "";
