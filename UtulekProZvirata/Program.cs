@@ -13,18 +13,23 @@ namespace UtulekProZvirata
         static void Main(string[] args)
         {
             //start up
+
             //import dat z excelu do listu
             List<Zvire> ListZvirat =  new List<Zvire>();
-            //ListZvirat.Add(new Zvire());
+            ListZvirat.Add(new Zvire(1,"pes","pes",5,"M",true,"dnes","dobrý","nic"));
             //ListZvirat.Add(new Zvire());
             //ListZvirat.Add(new Zvire());
 
-            bool Bezi = true;
+            bool Bezi = false;
+            Console.WriteLine(ListZvirat.Count);
+            Console.ReadLine();
             //spustit while loop
             //volani KonzoleUI.cs
             while (Bezi)
             {
-               switch(int.Parse(KonzoleUI.UI()))
+                int rozhodnuti = 0;
+                //int rozhodnuti = int.Parse(KonzoleUI.UI());
+               switch (rozhodnuti)
                 {
                     case 1:
                         //pridat zviře pomoci Zvire.cs
