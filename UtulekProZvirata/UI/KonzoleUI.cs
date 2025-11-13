@@ -12,7 +12,7 @@ namespace UtulekProZvirata.UI
 
         
 
-        static string UI()
+         string UI()
         {
             string uvodmsg = "=-=-= Útulek pro zvířata =-=-=";
             return uvodmsg;
