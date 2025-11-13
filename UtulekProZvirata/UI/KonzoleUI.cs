@@ -14,8 +14,54 @@ namespace UtulekProZvirata.UI
 
          string UI()
         {
-            string uvodmsg = "=-=-= Útulek pro zvířata =-=-=";
-            return uvodmsg;
+            //toto vypiš s console.write ne s console.writeline
+            string uvodmsg_odpověď = "";
+            Console.WriteLine( @"=-=-= Útulek pro zvířata =-=-= 
+1) Přidat zvíře 
+2) Vypsat všechna zvířata
+3) Vyhledat/filtrovat
+4) Označit adopci
+5) Statistiky
+0) Konec
+
+Volba: "); 
+
+            uvodmsg_odpověď =  Console.ReadLine();
+            return uvodmsg_odpověď;
+            
+        }
+
+        static string pridatzvire()
+        {
+            //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
+            string pridatzvire = "";
+
+            Console.WriteLine("Zadejte jmeno: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte druh: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte vek: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte pohlaví: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte jestli byl kastovaný (ano/ne): ");
+            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +", ";
+            Console.WriteLine("Zadejte dnešní datum: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte zdravotni stav: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte poznámku (nepovinné): ");
+            pridatzvire += Console.ReadLine();
+
+
+            return pridatzvire;
+        }
+
+        static string vypsat_zvirata()
+        {
+            string vypsat_zvirata = "";
+
+            return vypsat_zvirata;
         }
     }
 }
