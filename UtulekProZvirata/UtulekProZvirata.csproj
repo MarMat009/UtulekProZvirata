@@ -41,6 +41,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+	  <PackageReference Include="DocumentFormat.OpenXml" Version="2.21.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Zvire.cs" />
