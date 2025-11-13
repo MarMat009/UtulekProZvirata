@@ -18,6 +18,7 @@ namespace UtulekProZvirata.Model
         private string ZdravotniStav;
         private string Poznamka;
         private bool Adoptovan;
+        private string DatumAdopce;
 
         public Zvire(int Id, string Jmeno, string Druh, int Vek, string Pohlavi, bool Kastrovanost, string DatumPrijmu, string ZdravotniStav, string Poznamka)
         {
@@ -52,7 +53,7 @@ namespace UtulekProZvirata.Model
 
         public override string ToString()
         {
-            return "{Id}§{Jmeno}§{Druh}§{Vek}§{Pohlavi}§{Kastrovanost}§{DatumPrijmu}§{ZdravotniStav}§{Poznamka}";
+            return "{Id}§{Jmeno}§{Druh}§{Vek}§{Pohlavi}§{Kastrovanost}§{DatumPrijmu}§{ZdravotniStav}§{Poznamka}§{Adoptovan}§{DatumAdopce}";
         }
         public int ReturnId()
         {
@@ -78,6 +79,10 @@ namespace UtulekProZvirata.Model
         {
             return Kastrovanost;
         }
+        public string ReturnDatumPrijmu()
+        {
+            return DatumPrijmu;
+        }
         public string ReturnZdravotniStav()
         {
             return ZdravotniStav;
@@ -85,6 +90,14 @@ namespace UtulekProZvirata.Model
         public string ReturnPoznamka()
         {
             return Poznamka;
+        }
+        public bool ReturnAdoptovan()
+        {
+            return Adoptovan;
+        }
+        public string ReturnDatumAdopce()
+        {
+            return DatumAdopce;
         }
 
 
@@ -110,6 +123,11 @@ namespace UtulekProZvirata.Model
         public void ZmenPoznamka(string zmena)
         {
             Poznamka = zmena;
+        }
+        public void Adopce()
+        {
+            Adoptovan = true;
+            DatumAdopce = DateTime.Now.ToString("dd.MM.yyyy");
         }
     }
 }
