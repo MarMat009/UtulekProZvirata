@@ -16,7 +16,7 @@ namespace UtulekProZvirata.UI
         {
             //toto vypiš s console.write ne s console.writeline
             string uvodmsg_odpověď = "";
-            Console.WriteLine( @"=-=-= Útulek pro zvířata =-=-= 
+            Console.Write( @"=-=-= Útulek pro zvířata =-=-= 
 1) Přidat zvíře 
 2) Vypsat všechna zvířata
 3) Vyhledat/filtrovat
@@ -35,21 +35,21 @@ Volba: ");
         {
             //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
             string pridatzvire = "";
-
+            Console.WriteLine("=-=-= Útulek pro zvířata =-=-= ");
             Console.WriteLine("Zadejte jmeno: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte druh: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte vek: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte pohlaví: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte jestli byl kastovaný (ano/ne): ");
-            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +", ";
+            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +",";
             Console.WriteLine("Zadejte dnešní datum: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte zdravotni stav: ");
-            pridatzvire += Console.ReadLine() + ", ";
+            pridatzvire += Console.ReadLine() + ",";
             Console.WriteLine("Zadejte poznámku (nepovinné): ");
             pridatzvire += Console.ReadLine();
 
@@ -62,6 +62,71 @@ Volba: ");
             string vypsat_zvirata = "";
 
             return vypsat_zvirata;
+        }
+
+
+        static string vyhledat_zvirata()
+        {
+            string vyhledat_zvire = "";
+            int choice = 0;
+            Console.Write(@"=-=-= Útulek pro zvířata =-=-=
+Filtrovat podle:
+1) Jmena
+2) Druhu
+3) Věku
+4) Pohlaví
+5) Kastrovanosti
+6) Datumu příjmu
+7) Zdravotního stavu
+
+Volba: ");
+            if (int.TryParse(Console.ReadLine(), out choice))
+            {
+                choice = int.Parse(Console.ReadLine());
+                vyhledat_zvire += choice + "|";
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("Zadej jméno: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+                    
+                    case 2:
+                        Console.WriteLine("Zadej Druh: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Zadej věk: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Zadej pohlaví: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+
+                    case 5:
+                        Console.WriteLine("Zadej Kastrovanost (ano/ne: ");
+                        vyhledat_zvire += "kastrovanost: "+ Console.ReadLine();
+                        break;
+
+                    case 6:
+                        Console.WriteLine("Zadej datum příjmu: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+                    case 7:
+                        Console.WriteLine("Zadej zdravotní stav: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Špatný input");
+            }
+
+                return vyhledat_zvire;
         }
     }
 }
