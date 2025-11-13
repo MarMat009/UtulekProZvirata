@@ -30,13 +30,28 @@ Volba: ";
 
         static string pridatzvire()
         {
-            string pridatzvire_jmeno = "";
-            string pridatzvire_druh = "";
-            string pridatzvire_vek = "";
+            //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
+            string pridatzvire = "";
 
-            return pridatzvire_jmeno;
-            return pridatzvire_vek;
-            return pridatzvire_druh;
+            Console.WriteLine("Zadejte jmeno: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte druh: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte vek: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte pohlaví: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte jestli byl kastovaný (ano/ne): ");
+            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +", ";
+            Console.WriteLine("Zadejte dnešní datum: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte zdravotni stav: ");
+            pridatzvire += Console.ReadLine() + ", ";
+            Console.WriteLine("Zadejte poznámku (nepovinné): ");
+            pridatzvire += Console.ReadLine();
+
+
+            return pridatzvire;
         }
     }
 }
