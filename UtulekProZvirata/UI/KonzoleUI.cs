@@ -15,7 +15,8 @@ namespace UtulekProZvirata.UI
         static string uvodmsg()
         {
             //toto vypiš s console.write ne s console.writeline
-            string uvodmsg = @"=-=-= Útulek pro zvířata =-=-= 
+            string uvodmsg_odpověď = "";
+            Console.WriteLine( @"=-=-= Útulek pro zvířata =-=-= 
 1) Přidat zvíře 
 2) Vypsat všechna zvířata
 3) Vyhledat/filtrovat
@@ -23,8 +24,10 @@ namespace UtulekProZvirata.UI
 5) Statistiky
 0) Konec
 
-Volba: "; 
-            return uvodmsg;
+Volba: "); 
+
+            uvodmsg_odpověď =  Console.ReadLine();
+            return uvodmsg_odpověď;
             
         }
 
@@ -52,6 +55,13 @@ Volba: ";
 
 
             return pridatzvire;
+        }
+
+        static string vypsat_zvirata()
+        {
+            string vypsat_zvirata = "";
+
+            return vypsat_zvirata;
         }
     }
 }
