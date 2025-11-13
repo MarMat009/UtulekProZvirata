@@ -12,7 +12,7 @@ namespace UtulekProZvirata.UI
 
         
 
-         string UI()
+         public string UI()
         {
             //toto vypiš s console.write ne s console.writeline
             string uvodmsg_odpověď = "";
@@ -31,7 +31,7 @@ Volba: ");
             
         }
 
-        static string pridatzvire()
+        public string pridatzvire()
         {
             //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
             string pridatzvire = "";
