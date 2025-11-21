@@ -58,6 +58,7 @@ Volba: ");
 
         static string vypsat_zvirata()
         {
+            //vratit mi už v nějakém formátu já budu řešit jestli tam něco je nebo ne
             string vypsat_zvirata = "";
 
             return vypsat_zvirata;
@@ -77,6 +78,8 @@ Filtrovat podle:
 5) Kastrovanosti
 6) Datumu příjmu
 7) Zdravotního stavu
+
+0) Zpět
 
 Volba: ");
             if (int.TryParse(Console.ReadLine(), out choice))
@@ -117,6 +120,9 @@ Volba: ");
                     case 7:
                         Console.WriteLine("Zadej zdravotní stav: ");
                         vyhledat_zvire += Console.ReadLine();
+                        break;
+                    case 0:
+
                         break;
                 }
             }
