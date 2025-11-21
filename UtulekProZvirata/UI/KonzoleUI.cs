@@ -14,7 +14,6 @@ namespace UtulekProZvirata.UI
 
          public string UI()
         {
-            //toto vypiš s console.write ne s console.writeline
             string uvodmsg_odpověď = "";
             Console.Write( @"=-=-= Útulek pro zvířata =-=-= 
 1) Přidat zvíře 
@@ -37,19 +36,19 @@ Volba: ");
             string pridatzvire = "";
             Console.WriteLine("=-=-= Útulek pro zvířata =-=-= ");
             Console.WriteLine("Zadejte jmeno: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte druh: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte vek: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte pohlaví: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte jestli byl kastovaný (ano/ne): ");
-            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +",";
+            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +"|";
             Console.WriteLine("Zadejte dnešní datum: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte zdravotni stav: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte poznámku (nepovinné): ");
             pridatzvire += Console.ReadLine();
 
