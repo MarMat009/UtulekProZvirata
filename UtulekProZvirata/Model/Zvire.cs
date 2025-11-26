@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UtulekProZvirata.Model
 {
-    internal class Zvire
+    public class Zvire
     {
         private int Id;
         private string Jmeno;

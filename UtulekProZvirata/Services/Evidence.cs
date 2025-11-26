@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtulekProZvirata.Model;
 
 namespace UtulekProZvirata.Services
 {
@@ -21,7 +22,8 @@ namespace UtulekProZvirata.Services
 
             foreach (var z in listZvirat)
             {
-                Console.WriteLine($"{z.Jmeno} ({z.Druh}), věk: {z.Vek}, adoptováno: {(z.Adoptovano ? "ano" : "ne")}");
+                // Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh}), věk: {z.ReturnVek}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
+                Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
             }
         }
 
@@ -40,8 +42,8 @@ namespace UtulekProZvirata.Services
 
             // vyfiltruj zvířata podle jména nebo druhu
             var vysledky = listZvirat
-                .Where(z => z.Jmeno.ToLower().Contains(hledanyText) ||
-                            z.Druh.ToLower().Contains(hledanyText))
+                .Where(z => z.ReturnJmeno().ToLower().Contains(hledanyText) ||
+                            z.ReturnDruh().ToLower().Contains(hledanyText))
                 .ToList();
 
             if (vysledky.Count == 0)
@@ -53,7 +55,7 @@ namespace UtulekProZvirata.Services
             Console.WriteLine($"\nNalezeno {vysledky.Count} zvířat:");
             foreach (var z in vysledky)
             {
-                Console.WriteLine($"{z.Jmeno} ({z.Druh}), věk: {z.Vek}, adoptováno: {(z.Adoptovano ? "ano" : "ne")}");
+                Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
             }
         }
 
@@ -69,9 +71,9 @@ namespace UtulekProZvirata.Services
             }
 
             int celkem = listZvirat.Count;
-            int adoptovanych = listZvirat.Count(z => z.Adoptovano);
+            int adoptovanych = listZvirat.Count(z => z.ReturnAdoptovan());
             int neadoptovanych = celkem - adoptovanych;
-            double prumernyVek = listZvirat.Average(z => z.Vek);
+            double prumernyVek = listZvirat.Average(z => z.ReturnVek());
 
             Console.WriteLine($"Celkem zvířat: {celkem}");
             Console.WriteLine($"Adoptovaných: {adoptovanych}");
@@ -80,7 +82,7 @@ namespace UtulekProZvirata.Services
 
             Console.WriteLine("\nPočet zvířat podle druhu:");
             var podleDruhu = listZvirat
-                .GroupBy(z => z.Druh)
+                .GroupBy(z => z.ReturnDruh())
                 .Select(g => new { Druh = g.Key, Pocet = g.Count() });
 
             foreach (var druh in podleDruhu)
