@@ -35,6 +35,8 @@ Volba: ");
             //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
             string pridatzvire = "";
             Console.WriteLine("=-=-= Útulek pro zvířata =-=-= ");
+            Console.WriteLine("Zadejte ID: ");
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte jmeno: ");
             pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte druh: ");
@@ -58,7 +60,7 @@ Volba: ");
 
         static string vypsat_zvirata()
         {
-            //vratit mi už v nějakém formátu já budu řešit jestli tam něco je nebo ne
+            //dělá se v evidence
             string vypsat_zvirata = "";
 
             return vypsat_zvirata;
@@ -71,13 +73,14 @@ Volba: ");
             int choice = 0;
             Console.Write(@"=-=-= Útulek pro zvířata =-=-=
 Filtrovat podle:
-1) Jmena
-2) Druhu
-3) Věku
-4) Pohlaví
-5) Kastrovanosti
-6) Datumu příjmu
-7) Zdravotního stavu
+1) ID
+2) Jmena
+3) Druhu
+4) Věku
+5) Pohlaví
+6) Kastrovanosti
+7) Datumu příjmu
+8) Zdravotního stavu
 
 0) Zpět
 
@@ -89,35 +92,39 @@ Volba: ");
                 switch (choice)
                 {
                     case 1:
+                        Console.WriteLine("Zadej ID: ");
+                        vyhledat_zvire += Console.ReadLine();
+                        break;
+                    case 2:
                         Console.WriteLine("Zadej jméno: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
                     
-                    case 2:
+                    case 3:
                         Console.WriteLine("Zadej Druh: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
 
-                    case 3:
+                    case 4:
                         Console.WriteLine("Zadej věk: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
 
-                    case 4:
+                    case 5:
                         Console.WriteLine("Zadej pohlaví: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
 
-                    case 5:
+                    case 6:
                         Console.WriteLine("Zadej Kastrovanost (ano/ne: ");
                         vyhledat_zvire += "kastrovanost: "+ Console.ReadLine();
                         break;
 
-                    case 6:
+                    case 7:
                         Console.WriteLine("Zadej datum příjmu: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
-                    case 7:
+                    case 8:
                         Console.WriteLine("Zadej zdravotní stav: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
@@ -136,7 +143,7 @@ Volba: ");
 
         static string Označit_adopci()
         {
-            //nvm co sem
+            //dělá se v evidence
             string adopce = "";
 
             return adopce;
