@@ -14,7 +14,6 @@ namespace UtulekProZvirata.UI
 
          public string UI()
         {
-            //toto vypiš s console.write ne s console.writeline
             string uvodmsg_odpověď = "";
             Console.Write( @"=-=-= Útulek pro zvířata =-=-= 
 1) Přidat zvíře 
@@ -37,19 +36,19 @@ Volba: ");
             string pridatzvire = "";
             Console.WriteLine("=-=-= Útulek pro zvířata =-=-= ");
             Console.WriteLine("Zadejte jmeno: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte druh: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte vek: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte pohlaví: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte jestli byl kastovaný (ano/ne): ");
-            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +",";
+            pridatzvire +="Kasrovaný = "+ Console.ReadLine()  +"|";
             Console.WriteLine("Zadejte dnešní datum: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte zdravotni stav: ");
-            pridatzvire += Console.ReadLine() + ",";
+            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte poznámku (nepovinné): ");
             pridatzvire += Console.ReadLine();
 
@@ -59,6 +58,7 @@ Volba: ");
 
         static string vypsat_zvirata()
         {
+            //vratit mi už v nějakém formátu já budu řešit jestli tam něco je nebo ne
             string vypsat_zvirata = "";
 
             return vypsat_zvirata;
@@ -78,6 +78,8 @@ Filtrovat podle:
 5) Kastrovanosti
 6) Datumu příjmu
 7) Zdravotního stavu
+
+0) Zpět
 
 Volba: ");
             if (int.TryParse(Console.ReadLine(), out choice))
@@ -119,6 +121,9 @@ Volba: ");
                         Console.WriteLine("Zadej zdravotní stav: ");
                         vyhledat_zvire += Console.ReadLine();
                         break;
+                    case 0:
+
+                        break;
                 }
             }
             else
@@ -127,6 +132,14 @@ Volba: ");
             }
 
                 return vyhledat_zvire;
+        }
+
+        static string Označit_adopci()
+        {
+            //nvm co sem
+            string adopce = "";
+
+            return adopce;
         }
     }
 }
