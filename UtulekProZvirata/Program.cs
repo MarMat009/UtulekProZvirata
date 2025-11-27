@@ -57,7 +57,14 @@ namespace UtulekProZvirata
                         evidence.VyhledatZvirata(ListZvirat);
                         break;
                     case 4:
-                        //oznacit adopci pomoci
+                        int adopceid = konzoleui.Označit_adopci();
+                        foreach (var zvire in ListZvirat){
+                            if (zvire.ReturnId() == adopceid)
+                            {
+                                zvire.Adopce();
+                                zvire.ZmenaSkryti();
+                            }
+                        }
                         break;
                     case 5:
                         evidence.VypisStatistiky(ListZvirat);

@@ -139,12 +139,11 @@ Volba: ");
                 return vyhledat_zvire;
         }
 
-        static string Označit_adopci()
+        public int Označit_adopci()
         {
-            //dělá se v evidence
-            string adopce = "";
-
-            return adopce;
+            Console.WriteLine("zadejte id zvířete: ");
+            int adopceid = int.Parse(Console.ReadLine());
+            return adopceid;
         }
     }
 }
