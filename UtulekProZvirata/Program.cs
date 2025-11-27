@@ -21,7 +21,7 @@ namespace UtulekProZvirata
 
             List<Zvire> ListZvirat =  new List<Zvire>();
             ListZvirat.Add(new Zvire(1,"pes","pes",5,"M",true,"dnes","dobrý","nic"));
-            //ListZvirat.Add(new Zvire());
+            ListZvirat.Add(new Zvire(2, "míca","kočka",2,"F",false,"špatný","nope"));
             //ListZvirat.Add(new Zvire());
 
             bool Bezi = true;
@@ -57,7 +57,14 @@ namespace UtulekProZvirata
                         evidence.VyhledatZvirata(ListZvirat);
                         break;
                     case 4:
-                        //oznacit adopci pomoci
+                        int adopceid = konzoleui.Označit_adopci();
+                        foreach (var zvire in ListZvirat){
+                            if (zvire.ReturnId() == adopceid)
+                            {
+                                zvire.Adopce();
+                                zvire.ZmenaSkryti();
+                            }
+                        }
                         break;
                     case 5:
                         evidence.VypisStatistiky(ListZvirat);

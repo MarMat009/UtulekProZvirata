@@ -22,7 +22,8 @@ namespace UtulekProZvirata.Services
 
             foreach (var z in listZvirat)
             {
-                Console.WriteLine($"ID: {z.ReturnId()} | {z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
+                if (!z.ReturnSkryt())
+                { Console.WriteLine($"ID: {z.ReturnId()} | {z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}"); }
             }
         }
 
