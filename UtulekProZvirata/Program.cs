@@ -35,7 +35,7 @@ namespace UtulekProZvirata
                 {
                     case 1:
                         string prefab = konzoleui.pridatzvire();
-                        string[] hodnoty = prefab.Split(',');
+                        string[] hodnoty = prefab.Split('|');
                         bool kastrace = false;
                         if (hodnoty[4] == "ano")
                         {
