@@ -22,8 +22,7 @@ namespace UtulekProZvirata.Services
 
             foreach (var z in listZvirat)
             {
-                // Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh}), věk: {z.ReturnVek}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
-                Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
+                Console.WriteLine($"ID: {z.ReturnId()} | {z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
             }
         }
 
@@ -40,7 +39,6 @@ namespace UtulekProZvirata.Services
             Console.WriteLine("Zadej hledaný text (jméno, druh, nebo část slova): ");
             string hledanyText = Console.ReadLine().ToLower();
 
-            // vyfiltruj zvířata podle jména nebo druhu
             var vysledky = listZvirat
                 .Where(z => z.ReturnJmeno().ToLower().Contains(hledanyText) ||
                             z.ReturnDruh().ToLower().Contains(hledanyText))
@@ -55,7 +53,7 @@ namespace UtulekProZvirata.Services
             Console.WriteLine($"\nNalezeno {vysledky.Count} zvířat:");
             foreach (var z in vysledky)
             {
-                Console.WriteLine($"{z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
+                Console.WriteLine($"ID: {z.ReturnId()} | {z.ReturnJmeno()} ({z.ReturnDruh()}), věk: {z.ReturnVek()}, adoptováno: {(z.ReturnAdoptovan() ? "ano" : "ne")}");
             }
         }
 
