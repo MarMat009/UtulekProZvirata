@@ -21,7 +21,7 @@ namespace UtulekProZvirata
 
             List<Zvire> ListZvirat =  new List<Zvire>();
             ListZvirat.Add(new Zvire(1,"pes","pes",5,"M",true,"dnes","dobrý","nic"));
-            //ListZvirat.Add(new Zvire());
+            ListZvirat.Add(new Zvire(2, "míca","kočka",2,"F",false,"špatný","nope"));
             //ListZvirat.Add(new Zvire());
 
             bool Bezi = true;
