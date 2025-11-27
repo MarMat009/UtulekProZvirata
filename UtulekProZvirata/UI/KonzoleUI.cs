@@ -35,8 +35,6 @@ Volba: ");
             //id = automatic, jmeno, druh, vek, pohlavi, kastrovanost, datum prijmu, zdravotnistav, poznamka
             string pridatzvire = "";
             Console.WriteLine("=-=-= Útulek pro zvířata =-=-= ");
-            Console.WriteLine("Zadejte ID: ");
-            pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte jmeno: ");
             pridatzvire += Console.ReadLine() + "|";
             Console.WriteLine("Zadejte druh: ");
