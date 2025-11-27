@@ -133,5 +133,13 @@ Volba: ");
 
                 return vyhledat_zvire;
         }
+
+        static string Označit_adopci()
+        {
+            //nvm co sem
+            string adopce = "";
+
+            return adopce;
+        }
     }
 }
