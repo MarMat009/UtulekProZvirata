@@ -58,7 +58,7 @@ Volba: ");
 
         static string vypsat_zvirata()
         {
-            //vratit mi už v nějakém formátu já budu řešit jestli tam něco je nebo ne
+            //dělá se v evidence
             string vypsat_zvirata = "";
 
             return vypsat_zvirata;
@@ -136,7 +136,7 @@ Volba: ");
 
         static string Označit_adopci()
         {
-            //nvm co sem
+            //dělá se v evidence
             string adopce = "";
 
             return adopce;
