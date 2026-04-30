@@ -1,1 +1,3 @@
 # UtulekProZvirata
+
+ukol do skupin
